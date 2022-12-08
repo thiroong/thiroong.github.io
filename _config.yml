@@ -34,12 +34,12 @@ plainwhite:
     - post
   # generate social links in footer
   social_links:
-    twitter: https://twitter.com/1717007
+    twitter: 1717007
 #    github:  samarsault
 #    linkedIn: in/samarsault
     #dribbble: jekyll
     #flickr:   jekyll
-    instagram: https://www.instagram.com/dodojikim/
+    instagram: dodojikim
     #pinterest: jekyll
     #youtube: jekyll
     #facebook: jekyll
@@ -61,8 +61,10 @@ plainwhite:
 # - about.md
 
 # Build settings
-theme: plainwhite
+#theme: plainwhite
 
 plugins:
   - jekyll-seo-tag
 #  - jekyll-feed
+
+remote_theme: samarsault/plainwhite-jekyll
