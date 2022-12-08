@@ -1,0 +1,30 @@
+---
+layout: post
+title:  "마크다운 편집 익숙해지기"
+
+categories: 일상 
+---
+마크다운 써보기   
+
+
+### 졸려 이것보다 템플릿 적용하다가 시간소비해써ㅡㅡ
+    
+    냐하
+    
+### 코드도 먹히나 볼까요?
+
+
+```cpp
+for(auto& kv: report_map){
+       vector<string> block_id = kv.second;
+       for(int i = 0; i < block_id.size(); i++){
+           if(block_map.count(block_id[i]) > 0){
+           block_map[block_id[i]]++;
+       }
+       else{
+           block_map[block_id[i]] = 1;
+       }          
+       }
+   }
+```
+
