@@ -1,61 +1,30 @@
 ---
 layout: post
-title:  "프로그래머스 - 가장 가까운 같은 글자 - Lv1 C++"
-categories: PS
+title:  "마크다운 편집 익숙해지기"
+
+categories: 일상 
 ---
-Link : [프로그래머스 - 가장 가까운 글자 ](https://school.programmers.co.kr/learn/courses/30/lessons/142086, "programmers link")
+마크다운 써보기   
 
-****
-ㅎㅎ... 깃헙 블로그파는 큰 이유가 사이드 프로젝트하면서   
-정리도하고...자격증도 따고..겸사겸사 ps 공부한 것도 기록하려고...   
 
-아까 블로그 파기전에 진짜 오랜만에..프로그래머스 로그인하니 휴면계정이라함.  
-무려 1년동안 안들어감;;   
+### 졸려 이것보다 템플릿 적용하다가 시간소비해써ㅡㅡ
+    
+    냐하
+    
+### 코드도 먹히나 볼까요?
 
-들어가자마자 보인 연습문제 레벨 1 짜리 풂...   
 
-****   
-
-### 접근 방법
-     1. 일단 s를 다 한번 스캔필요
-     2. 스캔 유무를 저장할 수 있는 kv pair 구조 (char 하나를 key값으로하기)
-     3. val값은 중복 유무에 따라 업데이트해주며 
-     4. 인덱스 값에서 val값을 빼주어 "자신과 가장 가까운 곳의 같은 글자" 와의 거리 구해주기
-
-### 솔루션 - C++
-
- 
 ```cpp
-#include <string>
-#include <vector>
-#include <unordered_map>
-
-using namespace std;
-
-vector<int> solution(string s) {
-    vector<int> answer;
-    unordered_map<char,int> tmp;
-    
-    for(int i = 0; i < s.length(); i++){
-         char key = s[i];
-        if(tmp.count(key) > 0){
-            int val = tmp[key];
-            answer.push_back(i-val);
-            tmp[key] = i;
-        }
-        else{
-            tmp.insert(make_pair(key,i));
-            answer.push_back(-1);
-        }
-         
-    }
-    
-    return answer;
-}
-
+for(auto& kv: report_map){
+       vector<string> block_id = kv.second;
+       for(int i = 0; i < block_id.size(); i++){
+           if(block_map.count(block_id[i]) > 0){
+           block_map[block_id[i]]++;
+       }
+       else{
+           block_map[block_id[i]] = 1;
+       }          
+       }
+   }
 ```
-****
-시간복잡도 공간복잡도 등등은 다음부터 고려해보도록 하자 파하하 ^^ !
-
-
 
